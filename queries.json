@@ -1,0 +1,116 @@
+# snapshot & restore
+PUT /_snapshot/nycpd_accidents_backup
+{
+          "type": "fs",
+                "settings": {
+                              "location": "/Users/janusz.rybski/projects/yukon/atm/backup",
+                                        "compress": "true"
+                                              }
+}
+# list snapshots
+GET /_snapshot/nycpd_accidents_backup/_all
+# make backup
+PUT /_snapshot/nycpd_accidents_backup/nycpd-20150910?wait_for_completion=true 
+{
+      "indices": "nycpd",
+        "ignore_unavailable": "true",
+          "include_global_state": false
+}
+# delete snapshot
+DELETE /_snapshot/nycpd_accidents_backup/snapshot_1
+# restore snapshot
+POST /_snapshot/my_backup/snapshot_1/_restore
+{
+      "indices": "nycpd",
+        "ignore_unavailable": "true",
+          "include_global_state": false
+}
+
+POST /_snapshot/my_backup/snapshot_1/_restore
+{
+      "indices": "nycpd",
+        "ignore_unavailable": "true",
+          "include_global_state": false,
+            "rename_pattern": "index_(.+)",
+              "rename_replacement": "restored_index_$1"
+}
+
+
+# mapping template
+GET /_template/template_1
+DELETE /_template/template_1
+# end mapping template
+
+
+GET /nycpd/accidents/_search
+{
+      "query": {
+              "match_all": {}
+                }
+}
+
+## Workhop!
+
+# match
+GET /nycpd/accidents/_search
+{
+      "query": {
+              "match": {
+                        "on_street_name": "central"
+                            }
+                              },
+                                "sort": [
+                                    {
+                                              "cross_street_name": {
+                                                          "order": "asc"
+                                                                }
+                                                                    }
+                                                                      ]
+}
+
+GET /nycpd/accidents/_search
+{
+      "query": {
+              "match": {
+                        "borough": "MANHATTAN"
+                            }
+                              }
+}
+
+
+# multi match
+GET /nycpd/accidents/_search
+{
+      "query": {
+              "multi_match": {
+                        "query": "central",
+                              "fields": ["on_street_name", "cross_street_name"]
+                                  }
+                                    }
+}
+
+# term query
+
+
+
+# bool query
+
+
+# filtered query
+
+
+# dis max 
+
+
+
+## end of Workshop!
+
+
+
+DELETE /nycpd
+
+GET nycpd/_mapping
+GET /_cat/indices
+
+GET /_status
+
