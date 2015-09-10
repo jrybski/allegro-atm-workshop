@@ -1,0 +1,165 @@
+{
+  "name" : "nycpd-20150910",
+  "index_version" : 8,
+  "start_time" : 1441918272850,
+  "time" : 18,
+  "number_of_files" : 1,
+  "total_size" : 324,
+  "files" : [ {
+    "name" : "__0",
+    "physical_name" : "_k_Lucene41_0.pos",
+    "length" : 634321,
+    "checksum" : "1jaylky",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__1",
+    "physical_name" : "_m.cfs",
+    "length" : 376708,
+    "checksum" : "1xgm6zj",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__2",
+    "physical_name" : "_k_Lucene41_0.tim",
+    "length" : 1389688,
+    "checksum" : "gzes62",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__3",
+    "physical_name" : "_l.cfe",
+    "length" : 350,
+    "checksum" : "d2xq9f",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__4",
+    "physical_name" : "_l.cfs",
+    "length" : 523678,
+    "checksum" : "ehno4q",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__5",
+    "physical_name" : "_k.nvd",
+    "length" : 33082,
+    "checksum" : "11hhred",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__6",
+    "physical_name" : "_m.cfe",
+    "length" : 350,
+    "checksum" : "ztja2t",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__7",
+    "physical_name" : "_k_Lucene410_0.dvd",
+    "length" : 1052,
+    "checksum" : "m68lx7",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__8",
+    "physical_name" : "_n.si",
+    "length" : 242,
+    "checksum" : "13z8ewq",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFxNMdWNlbmU0NlNlZ21lbnRJbmZvAAAAAQY0LjEwLjQAAAJtAQAAAAgCb3MITWFjIE9TIFgLamF2YS52ZW5kb3IST3JhY2xlIENvcnBvcmF0aW9uDGphdmEudmVyc2lvbggxLjguMF80NQ5sdWNlbmUudmVyc2lvbgY0LjEwLjQHb3MuYXJjaAZ4ODZfNjQGc291cmNlBWZsdXNoCm9zLnZlcnNpb24HMTAuMTAuNAl0aW1lc3RhbXANMTQ0MTg4MjkwOTk1NgAAAAMGX24uY2ZzBl9uLmNmZQVfbi5zacAok+gAAAAAAAAAAJAV/Ho="
+  }, {
+    "name" : "__9",
+    "physical_name" : "_k_Lucene41_0.tip",
+    "length" : 27908,
+    "checksum" : "1od4uj6",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__a",
+    "physical_name" : "_k_Lucene410_0.dvm",
+    "length" : 91,
+    "checksum" : "fyf672",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__b",
+    "physical_name" : "_l.si",
+    "length" : 242,
+    "checksum" : "jbj2hr",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFxNMdWNlbmU0NlNlZ21lbnRJbmZvAAAAAQY0LjEwLjQAAAL/AQAAAAgCb3MITWFjIE9TIFgLamF2YS52ZW5kb3IST3JhY2xlIENvcnBvcmF0aW9uDGphdmEudmVyc2lvbggxLjguMF80NQ5sdWNlbmUudmVyc2lvbgY0LjEwLjQHb3MuYXJjaAZ4ODZfNjQGc291cmNlBWZsdXNoCm9zLnZlcnNpb24HMTAuMTAuNAl0aW1lc3RhbXANMTQ0MTg4MjkwNzg1NAAAAAMGX2wuY2ZlBl9sLmNmcwVfbC5zacAok+gAAAAAAAAAAEWhql8="
+  }, {
+    "name" : "__p",
+    "physical_name" : "segments_8",
+    "length" : 324,
+    "checksum" : "1782rfk",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFwhzZWdtZW50cwAAAAMAAAAAAAAAMwAAABkAAAAFAl9rCUx1Y2VuZTQxMP//////////AAAAAP////////////////////8AAAAAAAAAAAJfbAlMdWNlbmU0MTD//////////wAAAAD/////////////////////AAAAAAAAAAACX20JTHVjZW5lNDEw//////////8AAAAA/////////////////////wAAAAAAAAAAAl9uCUx1Y2VuZTQxMP//////////AAAAAP////////////////////8AAAAAAAAAAAJfbwlMdWNlbmU0MTD//////////wAAAAD/////////////////////AAAAAAAAAAAAAAABC3RyYW5zbG9nX2lkDTE0NDE4ODI4ODkwMjLAKJPoAAAAAAAAAACbyItg"
+  }, {
+    "name" : "__c",
+    "physical_name" : "_k.fdt",
+    "length" : 1909996,
+    "checksum" : "1szk9e7",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__e",
+    "physical_name" : "_n.cfe",
+    "length" : 350,
+    "checksum" : "ixrlgr",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__f",
+    "physical_name" : "_k_Lucene41_0.doc",
+    "length" : 606585,
+    "checksum" : "c7qy5w",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__g",
+    "physical_name" : "_o.cfe",
+    "length" : 350,
+    "checksum" : "15ib7gu",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__h",
+    "physical_name" : "_k.fdx",
+    "length" : 1314,
+    "checksum" : "1rcu3",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__i",
+    "physical_name" : "_n.cfs",
+    "length" : 425790,
+    "checksum" : "11phvps",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__j",
+    "physical_name" : "_k.si",
+    "length" : 411,
+    "checksum" : "1qozid",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFxNMdWNlbmU0NlNlZ21lbnRJbmZvAAAAAQY0LjEwLjQAAB9L/wAAAAoCb3MITWFjIE9TIFgLamF2YS52ZW5kb3IST3JhY2xlIENvcnBvcmF0aW9uDGphdmEudmVyc2lvbggxLjguMF80NQ5sdWNlbmUudmVyc2lvbgY0LjEwLjQTbWVyZ2VNYXhOdW1TZWdtZW50cwItMQdvcy5hcmNoBng4Nl82NAZzb3VyY2UFbWVyZ2ULbWVyZ2VGYWN0b3ICMTAKb3MudmVyc2lvbgcxMC4xMC40CXRpbWVzdGFtcA0xNDQxODgyOTA3MDQxAAAADBFfa19MdWNlbmU0MV8wLnBvcwZfay5mZHQRX2tfTHVjZW5lNDFfMC50aW0SX2tfTHVjZW5lNDEwXzAuZHZkBV9rLnNpEV9rX0x1Y2VuZTQxXzAuZG9jBl9rLm52bQZfay5mbm0RX2tfTHVjZW5lNDFfMC50aXASX2tfTHVjZW5lNDEwXzAuZHZtBl9rLm52ZAZfay5mZHjAKJPoAAAAAAAAAAAGRsfF"
+  }, {
+    "name" : "__k",
+    "physical_name" : "_k.nvm",
+    "length" : 231,
+    "checksum" : "cuc817",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__l",
+    "physical_name" : "_k.fnm",
+    "length" : 3275,
+    "checksum" : "1undwko",
+    "written_by" : "4.10.4"
+  }, {
+    "name" : "__m",
+    "physical_name" : "_o.si",
+    "length" : 242,
+    "checksum" : "bxj0oh",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFxNMdWNlbmU0NlNlZ21lbnRJbmZvAAAAAQY0LjEwLjQAAAAoAQAAAAgCb3MITWFjIE9TIFgLamF2YS52ZW5kb3IST3JhY2xlIENvcnBvcmF0aW9uDGphdmEudmVyc2lvbggxLjguMF80NQ5sdWNlbmUudmVyc2lvbgY0LjEwLjQHb3MuYXJjaAZ4ODZfNjQGc291cmNlBWZsdXNoCm9zLnZlcnNpb24HMTAuMTAuNAl0aW1lc3RhbXANMTQ0MTg4MjkxMDk5MAAAAAMFX28uc2kGX28uY2ZlBl9vLmNmc8Aok+gAAAAAAAAAACsAVzE="
+  }, {
+    "name" : "__n",
+    "physical_name" : "_m.si",
+    "length" : 242,
+    "checksum" : "13ck96m",
+    "written_by" : "4.10.4",
+    "meta_hash" : "P9dsFxNMdWNlbmU0NlNlZ21lbnRJbmZvAAAAAQY0LjEwLjQAAAIjAQAAAAgCb3MITWFjIE9TIFgLamF2YS52ZW5kb3IST3JhY2xlIENvcnBvcmF0aW9uDGphdmEudmVyc2lvbggxLjguMF80NQ5sdWNlbmUudmVyc2lvbgY0LjEwLjQHb3MuYXJjaAZ4ODZfNjQGc291cmNlBWZsdXNoCm9zLnZlcnNpb24HMTAuMTAuNAl0aW1lc3RhbXANMTQ0MTg4MjkwODkwNwAAAAMGX20uY2ZlBl9tLmNmcwVfbS5zacAok+gAAAAAAAAAAI3Q834="
+  }, {
+    "name" : "__o",
+    "physical_name" : "_o.cfs",
+    "length" : 45025,
+    "checksum" : "1kstfcs",
+    "written_by" : "4.10.4"
+  } ]
+}
