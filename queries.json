@@ -3,14 +3,14 @@ PUT /_snapshot/nycpd_accidents_backup
 {
           "type": "fs",
                 "settings": {
-                              "location": "/Users/janusz.rybski/projects/yukon/atm/backup",
+                              "location": "/tmp/nycpd_accidents_backup",
                                         "compress": "true"
                                               }
 }
 # list snapshots
-GET /_snapshot/nycpd_accidents_backup/_all
+GET /_snapshot/_all
 # make backup
-PUT /_snapshot/nycpd_accidents_backup/nycpd-20150910?wait_for_completion=true 
+PUT /_snapshot/nycpd_accidents_backup/nycpd-20150911?wait_for_completion=true 
 {
       "indices": "nycpd",
         "ignore_unavailable": "true",
@@ -19,21 +19,11 @@ PUT /_snapshot/nycpd_accidents_backup/nycpd-20150910?wait_for_completion=true
 # delete snapshot
 DELETE /_snapshot/nycpd_accidents_backup/snapshot_1
 # restore snapshot
-POST /_snapshot/my_backup/snapshot_1/_restore
-{
-      "indices": "nycpd",
-        "ignore_unavailable": "true",
-          "include_global_state": false
-}
+POST /_snapshot/nycpd_accidents_backup/nycpd-20150911/_restore
 
-POST /_snapshot/my_backup/snapshot_1/_restore
-{
-      "indices": "nycpd",
-        "ignore_unavailable": "true",
-          "include_global_state": false,
-            "rename_pattern": "index_(.+)",
-              "rename_replacement": "restored_index_$1"
-}
+
+# delete index
+DELETE /nycpd
 
 
 # mapping template
@@ -104,13 +94,4 @@ GET /nycpd/accidents/_search
 
 
 ## end of Workshop!
-
-
-
-DELETE /nycpd
-
-GET nycpd/_mapping
-GET /_cat/indices
-
-GET /_status
 
