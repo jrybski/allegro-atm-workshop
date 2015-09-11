@@ -1,0 +1,6 @@
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
