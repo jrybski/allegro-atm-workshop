@@ -1,0 +1,8 @@
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match": {
+      "on_street_name-analyzed": "avenue americas"
+    }
+  }
+}
