@@ -2,7 +2,7 @@ GET /nycpd/accidents/_search
 {
   "query": {
     "multi_match": {
-      "query": "central",
+      "query": "CENTRAL PARK",
       "fields": ["on_street_name", "cross_street_name"]
     }
   }

@@ -1,5 +1,5 @@
 {
-    "template" : "nycpd_accidents",
+    "template" : "nycpd",
     "settings" : {
       "index.refresh_interval" : "5s"
     },
@@ -57,6 +57,30 @@
           "contributing_factor_vehicle":{
           	"index":"not_analyzed",
           	"type":"string"
+          },
+          "number_of_cyclist_injured": {
+            "type": "integer"
+          },
+          "number_of_cyclist_killed": {
+            "type": "integer"
+          },
+          "number_of_motorist_injured": {
+            "type": "integer"
+          },
+          "number_of_motorist_killed": {
+            "type": "integer"
+          },
+          "number_of_pedestrians_injured": {
+            "type": "integer"
+          },
+          "number_of_pedestrians_killed": {
+            "type": "integer"
+          },
+          "number_of_persons_injured": {
+            "type": "integer"
+          },
+          "number_of_persons_killed": {
+            "type": "integer"
           }
         },
         "_all" : {
