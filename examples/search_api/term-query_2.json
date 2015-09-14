@@ -1,9 +1,0 @@
-GET nycpd/accidents/_search
-{
-  "query": {
-    "term": {
-      "on_street_name-analyzed": "AVENUE OF THE AMERICAS"
-    }
-  }
-}
-
