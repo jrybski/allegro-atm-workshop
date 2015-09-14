@@ -1,0 +1,15 @@
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match_all": {}
+      }, 
+      "filter": {
+        "term": {
+          "vehicle_type": "taxi"
+        }
+      }
+    }
+  }
+}
