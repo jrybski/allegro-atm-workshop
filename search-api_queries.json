@@ -1,0 +1,251 @@
+# term query
+# on_street_name is not analyzed and CENTRAL AVENUE is a term in inverted index
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "term": {
+      "on_street_name": "AVENUE OF THE AMERICAS" 
+    }
+  }
+}
+
+# term query
+# on_street_name-analyzed is analyzed field and that’s why here won’t be any results
+GET nycpd/accidents/_search
+{
+  "query": {
+    "term": {
+      "on_street_name-analyzed": "AVENUE OF THE AMERICAS"
+    }
+  }
+}
+
+# term query
+# on_street_name-analyzed is analyzed field so here we'll get some documents
+GET nycpd/accidents/_search
+{
+  "query": {
+    "term": {
+      "on_street_name-analyzed": "avenue"
+    }
+  }
+}
+
+# match query, all documents
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+# match query, all documents
+GET /nycpd/accidents/_search
+
+# match query, exact value "MANHATTAN"
+# borough is not analyzed field
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match": {
+      "borough": "MANHATTAN"
+    }
+  }
+}
+
+# match query, full-text
+# on_street_name-analyzed is analyzed
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match": {
+      "on_street_name-analyzed": "park"
+     }
+  }
+}
+
+# match query, full-text
+# on_street_name-analyzed is analyzed
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "match": {
+      "on_street_name-analyzed": "avenue PARK"
+     }
+  }
+}
+
+# match query sorted by cross_street_name
+# in ascending order
+GET /nycpd/accidents/_search
+{
+   
+  "query": {
+    "match": {
+      "on_street_name-analyzed": "central"
+    }
+  },
+  "fields": ["on_street_name-analyzed", "cross_street_name"], 
+  "sort": [
+    {
+      "cross_street_name": {
+        "order": "asc"
+      }
+    }
+  ]
+}
+
+# multi match query with pagination
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "taxi park",
+      "fields": ["on_street_name-analyzed", "vehicle_type"]
+    }
+  },
+  "fields": ["on_street_name-analyzed", "vehicle_type"],
+  "from": 100, 
+  "size": 20
+}
+
+# bool query
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "borough": "MANHATTAN"
+           }
+          
+        }
+      ],
+      "should": [
+        {
+          "term": {
+            "on_street_name-analyzed": "avenue"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "range": {
+            "number_of_persons_injured": {
+              "lte": 1
+            }
+          }
+        }
+      ],
+      "minimum_number_should_match": 0
+    }
+  },
+  "fields": ["borough", "on_street_name-analyzed", "number_of_persons_injured"], 
+  "size": 300
+}
+
+# filtered query, all documents are filtered by a term filter
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match_all": {}
+      }, 
+      "filter": {
+        "term": {
+          "vehicle_type": "taxi"
+        }
+      }
+    }
+  }
+}
+
+# fitered query, match query + range filter
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "filtered": { 
+      "query": {
+        "match": {
+          "vehicle_type": "taxi"
+        }
+      },
+      "filter": {
+        "range": {
+          "number_of_persons_injured": {
+            "gte": 5 
+          }
+        }
+      }
+    }
+  },
+  "fields": ["vehicle_type", "number_of_persons_injured"]
+}
+
+# filtered query, match query + two filters, term and range
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match": {
+          "borough": "MANHATTAN"
+        }
+      },
+      "filter": {
+        "and": {
+          "filters": [
+            {
+              "term": {
+                "vehicle_type": "passenger"
+              }
+            },
+            {
+              "range": {
+                "@timestamp": {
+                  "gte": "2015-08-15",
+                  "lte": "2015-08-16"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+
+# filtered query, combining filters
+GET /nycpd/accidents/_search
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match": { 
+          "on_street_name-analyzed": "full text search avenue central" 
+        }
+      },
+      "filter": {
+        "bool": {
+          "must": {
+            "range": {
+              "@timestamp": {
+                "gte": "2015-07-16",
+                "lte": "2015-07-16"
+              }
+            }
+          },
+          "should": [
+             { "term": { "borough":  "BROOKLYN" }},
+             { "term": { "number_of_pedestrians_injured": 1 }
+            }
+          ],
+          "must_not": { "term": { "contributing_factor_vehicle": "Unspecified" }}
+        }
+      }
+    }
+  }
+  , "size": 100
+}
